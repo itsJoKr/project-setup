@@ -3,6 +3,7 @@ package com.example.jokr.propermock.ui
 import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
 import com.example.jokr.propermock.R
 import com.example.jokr.propermock.dagger.LazyInjection
 import com.example.jokr.propermock.dagger.ViewModelInjection
@@ -23,7 +24,10 @@ class MainActivity : AppCompatActivity() {
 
         vm.get().races.observe(this, Observer {
             it?.let { races ->
-                raceText.text = races.first().circuitName
+                recycler.apply {
+                    layoutManager = LinearLayoutManager(this@MainActivity)
+                    adapter = MainAdapter(races) {}
+                }
             }
         })
 

@@ -5,11 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/raceItemRoot"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingBottom="2dp">
 
     <ImageView
         android:id="@+id/raceBackgroundImage"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:tint="#BF3c0050"
         android:background="#BF3c0050"

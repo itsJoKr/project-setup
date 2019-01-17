@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import com.example.jokr.propermock.R
 import com.example.jokr.propermock.common.SimpleViewHolder
 import com.example.jokr.propermock.common.extensions.inflateIntoSelf
+import com.example.jokr.propermock.dagger.modules.NetworkModule.Companion.BASE_URL
 import com.example.jokr.propermock.models.Race
 import com.example.jokr.propermock.models.Races
 import com.squareup.picasso.Picasso
@@ -28,7 +29,20 @@ class MainAdapter(
             raceCode.text = race.raceCode
             raceName.text = race.circuitName
             raceCityName.text = race.city
-            Picasso.get().load(race.images!!.first().url).centerCrop().into(raceBackgroundImage)
+            raceDate.text = race.raceDate
+
+            val url = fullUrl(race.images!!.first().url!!)
+            Picasso.get().load(url).into(raceBackgroundImage)
+            val flagUrl = fullUrl(race.raceFlag!!.url!!)
+            Picasso.get().load(flagUrl).into(raceCountryFlag)
+        }
+    }
+
+    private fun fullUrl(url: String): String {
+        return if (url.startsWith("/")) {
+            BASE_URL + url
+        } else {
+            url
         }
     }
 }

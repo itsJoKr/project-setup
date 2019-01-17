@@ -5,7 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import android.os.StrictMode
 import android.support.test.runner.AndroidJUnitRunner
-import com.example.jokr.propermock.dagger.mock.MockedMockApp
+import com.example.jokr.propermock.dagger.mock.MockedProjectApp
 
 class MockTestRunner: AndroidJUnitRunner() {
 
@@ -20,6 +20,6 @@ class MockTestRunner: AndroidJUnitRunner() {
         ClassNotFoundException::class
     )
     override fun newApplication(cl: ClassLoader, className: String, context: Context): Application {
-        return super.newApplication(cl, MockedMockApp::class.java.name, context)
+        return super.newApplication(cl, MockedProjectApp::class.java.name, context)
     }
 }

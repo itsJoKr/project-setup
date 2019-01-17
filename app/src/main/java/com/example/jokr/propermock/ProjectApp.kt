@@ -9,7 +9,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
 
-open class ProperMockApp: Application(), HasActivityInjector {
+open class ProjectApp: Application(), HasActivityInjector {
 
 
     lateinit var appComponent: AppComponent

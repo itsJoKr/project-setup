@@ -17,10 +17,14 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
 
+    companion object {
+        const val BASE_URL = "https://www-tst.formulae.cloud"
+    }
+
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://www-tst.formulae.cloud")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .client(okHttpClient)

@@ -1,9 +1,8 @@
 package com.example.jokr.propermock.dagger.mock
 
-import com.example.jokr.propermock.ProperMockApp
-import com.example.jokr.propermock.dagger.AppComponent
+import com.example.jokr.propermock.ProjectApp
 
-class MockedMockApp: ProperMockApp() {
+class MockedProjectApp: ProjectApp() {
 
     override fun initializeAppComponent() {
         val mockAppComponent =  DaggerMockAppComponent.builder().application(this).build()

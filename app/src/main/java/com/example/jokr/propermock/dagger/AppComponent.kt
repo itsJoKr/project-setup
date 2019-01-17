@@ -1,6 +1,6 @@
 package com.example.jokr.propermock.dagger
 
-import com.example.jokr.propermock.ProperMockApp
+import com.example.jokr.propermock.ProjectApp
 import com.example.jokr.propermock.dagger.modules.ActivityInjectorsModule
 import com.example.jokr.propermock.dagger.modules.ApiModule
 import com.example.jokr.propermock.dagger.modules.NetworkModule
@@ -24,10 +24,10 @@ interface AppComponent {
     interface Builder {
 
         @BindsInstance
-        fun application(application: ProperMockApp): Builder
+        fun application(application: ProjectApp): Builder
 
         fun build(): AppComponent
     }
 
-    fun inject(formulaEApplication: ProperMockApp)
+    fun inject(formulaEApplication: ProjectApp)
 }

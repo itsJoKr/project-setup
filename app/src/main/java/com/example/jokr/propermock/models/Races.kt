@@ -7,6 +7,7 @@ typealias Races = List<Race>
 
 class Race(
     @SerializedName("country") val country: String?,
+    @SerializedName("raceDate") val raceDate: String?,
     @SerializedName("qualifyingRecordDriver") val qualifyingRecordDrivers: Driver?,
     @SerializedName("description") val description: String?,
     @SerializedName("images") val images: List<Image>?,
