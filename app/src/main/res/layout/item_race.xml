@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raceItemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/raceBackgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tint="#BF3c0050"
+        android:background="#BF3c0050"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/startGuidelineHeader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp"/>
+
+    <ImageView
+        android:id="@+id/raceCountryFlag"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/startGuidelineHeader"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/raceSequence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:includeFontPadding="false"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        tools:text="R12"
+        android:textColor="#fff"
+        android:textSize="56sp"
+        app:layout_constraintBottom_toBottomOf="@id/raceCountryFlag"
+        app:layout_constraintStart_toEndOf="@id/raceCountryFlag"
+        app:layout_constraintTop_toTopOf="@id/raceCountryFlag"/>
+
+    <TextView
+        android:id="@+id/raceCode"
+        android:layout_width="0dp"
+        android:textDirection="locale"
+        android:gravity="center_vertical"
+        app:autoSizeTextType="uniform"
+        android:lines="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="8dp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:textColor="#fff"
+        android:textSize="56sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/raceSequence"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/raceSequence"
+        tools:text="هونغ كونغ غور" />
+
+    <TextView
+        android:id="@+id/raceName"
+        android:layout_marginTop="37dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="8sp"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:textDirection="locale"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuidelineHeader"
+        app:layout_constraintTop_toBottomOf="@id/raceCountryFlag"
+        tools:text="Hong kong E-prix"/>
+
+    <TextView
+        android:id="@+id/raceCityName"
+        android:layout_marginTop="85dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="26sp"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:textDirection="locale"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuidelineHeader"
+        app:layout_constraintTop_toBottomOf="@id/raceName"
+        tools:text="Hong kong, HK"/>
+
+    <TextView
+        android:id="@+id/raceDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="4sp"
+        android:paddingBottom="30dp"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textDirection="locale"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuidelineHeader"
+        app:layout_constraintTop_toBottomOf="@id/raceCityName"
+        tools:text="Dec 12"/>
+
+</android.support.constraint.ConstraintLayout>

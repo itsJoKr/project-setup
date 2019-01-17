@@ -1,4 +1,4 @@
-package com.example.jokr.propermock.arch
+package com.example.jokr.propermock.common
 
 import android.arch.lifecycle.ViewModel
 import kotlinx.coroutines.CoroutineScope

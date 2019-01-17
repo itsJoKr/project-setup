@@ -1,6 +1,8 @@
 package com.example.jokr.propermock.dagger.modules
 
 import com.example.jokr.propermock.models.Races
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
 import dagger.Provides
@@ -18,7 +20,7 @@ class NetworkModule {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://www-prd.formulae.cloud")
+            .baseUrl("https://www-tst.formulae.cloud")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .client(okHttpClient)
@@ -48,6 +50,11 @@ class NetworkModule {
         val builder = OkHttpClient.Builder()
             .addInterceptor(interceptor)
         return builder.build()
+    }
+
+    @Provides
+    fun provideGson(): Gson {
+        return GsonBuilder().create()
     }
 
 }
