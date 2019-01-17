@@ -1,10 +1,11 @@
-package com.example.jokr.propermock.ui
+package com.example.jokr.propermock.ui.main
 
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
 import com.example.jokr.propermock.R
 import com.example.jokr.propermock.common.SimpleViewHolder
 import com.example.jokr.propermock.common.extensions.inflateIntoSelf
+import com.example.jokr.propermock.common.extensions.toUrl
 import com.example.jokr.propermock.dagger.modules.NetworkModule.Companion.BASE_URL
 import com.example.jokr.propermock.models.Race
 import com.example.jokr.propermock.models.Races
@@ -31,18 +32,16 @@ class MainAdapter(
             raceCityName.text = race.city
             raceDate.text = race.raceDate
 
-            val url = fullUrl(race.images!!.first().url!!)
+            holder.itemView.setOnClickListener {
+                onRaceClick(race)
+            }
+
+            val url = race.images!!.first().url!!.toUrl()
             Picasso.get().load(url).into(raceBackgroundImage)
-            val flagUrl = fullUrl(race.raceFlag!!.url!!)
+            val flagUrl = race.raceFlag!!.url!!.toUrl()
             Picasso.get().load(flagUrl).into(raceCountryFlag)
         }
     }
 
-    private fun fullUrl(url: String): String {
-        return if (url.startsWith("/")) {
-            BASE_URL + url
-        } else {
-            url
-        }
-    }
+
 }

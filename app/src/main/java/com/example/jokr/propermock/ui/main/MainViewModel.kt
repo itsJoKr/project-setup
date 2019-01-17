@@ -1,4 +1,4 @@
-package com.example.jokr.propermock.ui
+package com.example.jokr.propermock.ui.main
 
 import android.arch.lifecycle.MutableLiveData
 import com.example.jokr.propermock.common.BaseViewModel

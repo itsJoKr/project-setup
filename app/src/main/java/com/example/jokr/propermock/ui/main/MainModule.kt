@@ -1,4 +1,4 @@
-package com.example.jokr.propermock.ui
+package com.example.jokr.propermock.ui.main
 
 import com.example.jokr.propermock.dagger.InjectionViewModelProvider
 import com.example.jokr.propermock.dagger.ViewModelInjection

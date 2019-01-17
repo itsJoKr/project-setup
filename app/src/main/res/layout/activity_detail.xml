@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jokr.propermock.ui.detail.DetailActivity">
+
+
+    <ImageView
+        android:id="@+id/raceBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="centerCrop"
+        android:background="#BF3c0050"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="#BF3c0050"
+        app:layout_constraintBottom_toBottomOf="@id/raceBackgroundImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/raceSequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:includeFontPadding="false"
+            android:layout_gravity="left|center"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            tools:text="R12"
+            android:textColor="#fff"
+            android:textSize="46sp"
+            app:layout_constraintBottom_toBottomOf="@id/raceCountryFlag"
+            app:layout_constraintStart_toEndOf="@id/raceCountryFlag"
+            app:layout_constraintTop_toTopOf="@id/raceCountryFlag"/>
+
+        <TextView
+            android:id="@+id/raceCode"
+            android:layout_width="wrap_content"
+            android:textDirection="locale"
+            android:gravity="center_vertical"
+            app:autoSizeTextType="uniform"
+            android:lines="1"
+            android:layout_gravity="right|center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="8dp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:textColor="#fff"
+            android:textSize="46sp"
+            tools:text="هونغ كونغ غور" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/raceName"
+        app:layout_constraintTop_toBottomOf="@id/raceBackgroundImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="18dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Race name"/>
+
+    <TextView
+        android:id="@+id/raceDate"
+        app:layout_constraintTop_toTopOf="@id/raceName"
+        app:layout_constraintBottom_toBottomOf="@id/raceName"
+        app:layout_constraintStart_toEndOf="@id/raceName"
+        android:padding="18dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Race date"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/raceName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="18dp"
+        tools:text="Description goes here"/>
+
+
+</android.support.constraint.ConstraintLayout>

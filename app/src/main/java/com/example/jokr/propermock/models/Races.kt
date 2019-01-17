@@ -1,10 +1,13 @@
 package com.example.jokr.propermock.models
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 import retrofit2.Response
 
 typealias Races = List<Race>
 
+@Parcelize
 class Race(
     @SerializedName("country") val country: String?,
     @SerializedName("raceDate") val raceDate: String?,
@@ -34,16 +37,17 @@ class Race(
     @SerializedName("activeRace") val activeRace: Boolean?,
     @SerializedName("raceTrackImage") val raceTrackImage: Image?,
     @SerializedName("raceSponsorImage") val raceSponsorImage: Image?
-)
+): Parcelable
 
-
+@Parcelize
 data class Image(
     @SerializedName("title") val title: String?,
     @SerializedName("url") val url: String?,
     @SerializedName("appImageType") val type: Int?
-)
+): Parcelable
 
 
+@Parcelize
 data class Driver(
     @SerializedName("activeDriver") val active: Boolean?,
     @SerializedName("audioFeed") val audioFeed: String?,
@@ -78,4 +82,4 @@ data class Driver(
     @SerializedName("points") val points: Int?,
     @SerializedName("teamName") val teamName: String?,
     @SerializedName("wins") val wins: Int?
-)
+): Parcelable

@@ -1,7 +1,7 @@
 package com.example.jokr.propermock.dagger.modules
 
-import com.example.jokr.propermock.ui.MainActivity
-import com.example.jokr.propermock.ui.MainModule
+import com.example.jokr.propermock.ui.main.MainActivity
+import com.example.jokr.propermock.ui.main.MainModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
