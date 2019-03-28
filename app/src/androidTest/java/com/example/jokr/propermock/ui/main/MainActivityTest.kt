@@ -29,7 +29,7 @@ class MainActivityTest {
     fun mainActivityTest() {
         onView(withId(R.id.recycler)).perform(ViewActions.swipeUp())
         onView(withId(R.id.recycler)).perform(ViewActions.swipeDown())
-
+        onView(withId(R.id.recycler)).perform(ViewActions.swipeDown())
 
         onView(withText("ZG")).check(matches(isDisplayed()))
         onView(withText("R1")).check(matches(isDisplayed()))
