@@ -1,7 +1,7 @@
 package com.example.jokr.propermock.ui.main
 
-import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.jokr.propermock.R
 import com.example.jokr.propermock.common.SimpleViewHolder
 import com.example.jokr.propermock.common.extensions.inflateIntoSelf

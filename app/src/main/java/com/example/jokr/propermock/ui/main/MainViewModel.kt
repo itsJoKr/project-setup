@@ -1,6 +1,7 @@
 package com.example.jokr.propermock.ui.main
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.example.jokr.propermock.common.BaseViewModel
 import com.example.jokr.propermock.models.Races
 import com.example.jokr.propermock.repositories.RacesRepository
@@ -18,7 +19,7 @@ class MainViewModel @Inject constructor(
     }
 
     private fun fetchRaces() {
-        launch(coroutineContext) {
+        viewModelScope.launch {
             val response = racesRepository.getRaces().await()
             races.postValue(response)
         }

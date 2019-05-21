@@ -1,14 +1,13 @@
 package com.example.jokr.propermock.ui.detail
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.jokr.propermock.R
 import com.example.jokr.propermock.common.extensions.toUrl
 import com.example.jokr.propermock.models.Race
 import com.fiaformulae.formulae.common.bindings.arg
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.android.synthetic.main.item_race.view.*
 
 class DetailActivity : AppCompatActivity() {
 
